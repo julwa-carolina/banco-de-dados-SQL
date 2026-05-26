@@ -1,0 +1,23 @@
+CREATE TABLE alunos (
+    alunos_id INTEGER PRIMARY KEY,
+    aluno_nome TEXT NOT NULL,
+    aluno_cidade TEXT,
+    aluno_email TEXT NOT NULL,
+    aluno_curso TEXT NOT NULL
+);
+
+INSERT INTO alunos VALUES (1, 'Ryan', 'Miguelopolis','ryanlopes@gmail.com', 'ADS');
+INSERT INTO alunos VALUES (2, 'Joana', 'Maua','', 'CC');
+INSERT INTO alunos VALUES (3, 'Maria', 'Miguelopolis','marias@gmail.com', 'SI');
+INSERT INTO alunos VALUES (4, 'Luna', 'Altinópolis','lunanatobraga@gmail.com', 'ADS');
+INSERT INTO alunos VALUES (5, 'Julia', 'Altinópolis','julwacarolina@gmail.com', 'ADS');
+
+-- SELECT * FROM alunos;
+-- SELECT aluno_nome, aluno_cidade FROM alunos;
+-- SELECT aluno_nome FROM alunos WHERE aluno_cidade = 'Miguelopolis';
+-- aluno_nome FROM alunos WHERE alunos_id = 3;
+-- SELECT aluno_nome FROM alunos WHERE alunos_id <= 3;
+-- SELECT aluno_nome FROM alunos WHERE alunos_id <= 3 AND aluno_cidade = 'Miguelopolis';
+-- SELECT aluno_nome FROM alunos WHERE aluno_curso = 'CC' OR aluno_curso = 'SI';
+-- SELECT aluno_nome FROM alunos WHErE aluno_cidade LIKE 'A
+SELECT aluno_nome FROM alunos WHERE aluno_cidade in ('Franca', 'Maua');
